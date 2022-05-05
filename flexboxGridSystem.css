@@ -18,42 +18,70 @@ body {
   );
 }
 
-.row {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  gap: 4%;
-  margin-bottom: 1rem;
-}
-
-.span2 {
-  flex-basis: 48%;
-}
-
-.span3 {
-  flex-basis: 74%;
-}
-
-.span4 {
-  flex-basis: 100%;
-}
-
-.order1 {
-  order: 1;
-}
-
-.order2 {
-  order: 2;
-}
-
-.order3 {
-  order: 3;
-}
-
 figure {
   margin: 0;
   padding: 0;
-  flex-basis: 22%;
+}
+
+@media (min-width: 550px) {
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 4%;
+    margin-bottom: 1rem;
+  }
+
+  .span3 {
+    flex-basis: 100%;
+  }
+
+  .span3-1 {
+    flex-basis: 100%;
+  }
+
+  .span4 {
+    flex-basis: 100%;
+  }
+
+  .span2-4 {
+    flex-basis: 100%;
+  }
+
+  figure {
+    flex-basis: 48%;
+  }
+}
+
+@media (min-width: 800px) {
+  .span2,
+  .span2-4 {
+    flex-basis: 48%;
+  }
+
+  .span3 {
+    flex-basis: 74%;
+  }
+
+  .span4 {
+    flex-basis: 100%;
+  }
+
+  .order1 {
+    order: 1;
+  }
+
+  .order2 {
+    order: 2;
+  }
+
+  .order3 {
+    order: 3;
+  }
+
+  figure {
+    flex-basis: 22%;
+  }
 }
 
 figcaption {
