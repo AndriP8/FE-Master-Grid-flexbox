@@ -1,0 +1,60 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  border: 0;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+figcaption {
+  background-color: #001219;
+  color: white;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.7;
+}
+figcaption * {
+  margin: 0.5rem;
+}
+img {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 1%;
+  }
+  figure {
+    flex-basis: 48%;
+  }
+}
+
+.reverse {
+  flex-flow: row-reverse wrap;
+}
+.order-1 {
+  order: 1;
+}
+.order-2 {
+  order: 2;
+}
+.order-3 {
+  order: 3;
+}
