@@ -31,6 +31,48 @@ body {
   margin: 0;
 }
 
+.header {
+  background-color: var(--color5);
+}
+
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+nav ul li:first-child {
+  flex-basis: 100%;
+}
+
+nav ul li:not(:first-child) {
+  flex-basis: 49%;
+  background-color: var(--color10);
+  border-radius: 8px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  display: block;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+nav ul li img {
+  max-width: 100%;
+}
+
 section {
   max-width: 1200px;
   margin: 0 auto;
@@ -150,11 +192,23 @@ footer li {
 
 footer address {
   font-style: normal;
-  margin-top: 2rem;
   font-weight: bold;
 }
 
 @media (min-width: 550px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  nav ul li:not(:first-child) {
+    flex-basis: 24%;
+    background-color: transparent;
+  }
+
+  nav ul li a {
+    color: var(--color1);
+  }
+
   .missiontext {
     display: flow-root;
     max-width: 900px;
@@ -186,9 +240,29 @@ footer address {
   }
 }
 
-/* At this breakpoint, transition to 3 figures per line */
-
 @media (min-width: 800px) {
+  nav ul {
+    flex-flow: row;
+  }
+
+  nav ul li:nth-child(2),
+  nav ul li:nth-child(3) {
+    order: 1;
+    flex-basis: 10%;
+  }
+
+  nav ul li:first-child {
+    order: 2;
+    flex-basis: auto;
+    margin: 0 auto;
+  }
+
+  nav ul li:nth-child(4),
+  nav ul li:nth-child(5) {
+    order: 3;
+    flex-basis: 10%;
+  }
+
   .row {
     display: flex;
     flex-flow: row wrap;
